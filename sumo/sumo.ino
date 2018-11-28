@@ -41,7 +41,7 @@ void updateMotors(){
     }
   }else if(_backward){
     if(_left){  // backward-left
-      leftMotor.drive(-aspeed/2);
+      leftMotor.drive(-speed/2);
       rightMotor.drive(-speed);
     }else if(_right){ // backward-right
       leftMotor.drive(-speed);
@@ -94,44 +94,8 @@ void handleInput(int key, char action){
     }else if(action == 'u' && _right){
       _right = false;
     }
-  }else if(action == 'd'){
-    input_sound(key);
   }
   updateMotors();
-}
-
-void input_sound(int key){
-  if(key == 97){
-    tone(BUZZER_PIN, NOTE_B4, 100);
-  }else if(key == 115){
-    tone(BUZZER_PIN, NOTE_C5, 100);
-  }else if(key == 100){
-    tone(BUZZER_PIN, NOTE_D5, 100);
-  }else if(key == 102){
-    tone(BUZZER_PIN, NOTE_E5, 100);
-  }else if(key == 103){
-    tone(BUZZER_PIN, NOTE_F5, 100);
-  }else if(key == 104){
-    tone(BUZZER_PIN, NOTE_G5, 100);
-  }else if(key == 106){
-    tone(BUZZER_PIN, NOTE_A5, 100);
-  }else if(key == 107){
-    tone(BUZZER_PIN, NOTE_B5, 100);
-  }else if(key == 108){
-    tone(BUZZER_PIN, NOTE_C6, 100);
-  }else if(key == 101){
-    tone(BUZZER_PIN, NOTE_CS5, 100);
-  }else if(key == 114){
-    tone(BUZZER_PIN, NOTE_DS5, 100);
-  }else if(key == 121){
-    tone(BUZZER_PIN, NOTE_FS5, 100);
-  }else if(key == 117){
-    tone(BUZZER_PIN, NOTE_GS5, 100);
-  }else if(key == 105){
-    tone(BUZZER_PIN, NOTE_AS5, 100);
-  }else if(key == 112){
-    tone(BUZZER_PIN, NOTE_CS6, 100);
-  }
 }
 
 void loop() {
