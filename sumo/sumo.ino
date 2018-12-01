@@ -4,7 +4,6 @@
 #define DOWN_KEY 274
 #define LEFT_KEY 276
 #define RIGHT_KEY 275
-#define BUZZER_PIN 10
 
 #define AIN1 2
 #define BIN1 7
