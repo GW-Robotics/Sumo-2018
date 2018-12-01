@@ -5,13 +5,13 @@
 #define LEFT_KEY 276
 #define RIGHT_KEY 275
 
-#define AIN1 2
-#define BIN1 7
-#define AIN2 4
-#define BIN2 8
+#define AIN1 4
+#define BIN1 5
+#define AIN2 2
+#define BIN2 10
 #define PWMA 3
 #define PWMB 9
-#define STBY 5
+#define STBY 6
 
 const int offsetA = 1;
 const int offsetB = 1;
