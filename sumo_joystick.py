@@ -3,6 +3,7 @@ import pygame
 import serial
 from serial import SerialException
 import serial.tools.list_ports
+import os
 
 def main():
     pygame.init()
@@ -63,7 +64,10 @@ def main():
                 pass
                 # print("Joystick button released.")
 
-        x_axis = joystick.get_axis(2)
+        if os.name == 'posix':
+            x_axis = joystick.get_axis(2)
+        else:
+            x_axis = joystick.get_axis(4)
         y_axis = joystick.get_axis(1)
 
         if x_axis > 0.5 and lastX <= 0.5:
